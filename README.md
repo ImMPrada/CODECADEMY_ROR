@@ -17,8 +17,8 @@ To preview your app at any point:
 In the terminal, type rails s -p 4001
 In the browser, visit http://localhost:4001
 
-# **SAVING DATA**
-## ***Request/Response Cycle***
+## **SAVING DATA**
+###### ***Request/Response Cycle***
 
 So far we’ve built a Rails app containing a static page. To do this, we used a controller, a route, and a view. The request/response cycle summarizes how these three parts work together.
 
@@ -50,8 +50,8 @@ Let’s start here by creating a model.
 2. Open the migration file in db/migrate/. The migration file contains a few things:
 
   - The change method tells Rails what change to make to the database. Here it uses the create_table method to create a new table in the database for storing messages.
-  - Inside create_table, we added t.text :content. This will create a text column called content in the messages tables.
-  - The final line t.timestamps is a Rails command that creates two more columns in the messages table called created_at and updated_at. These columns are automatically set when a message is created and updated.
+  - - Inside create_table, we added t.text :content. This will create a text column called content in the messages tables.
+    - The final line t.timestamps is a Rails command that creates two more columns in the messages table called created_at and updated_at. These columns are automatically set when a message is created and updated.
 
 
 3. The bundle exec rake db:migrate command updates the database with the new messages data model. With this command, we instruct the bundler to execute (exec) a rake task, in this case, migrate, on the database (db).
